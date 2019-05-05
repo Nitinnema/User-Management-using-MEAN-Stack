@@ -1,0 +1,60 @@
+.user-list{
+  background-color: #fcfcfc;
+}
+.table{
+  background-color: #ffffff;
+  margin: 40px auto;
+}
+td{
+  font-size: 14px;
+}
+.modal-content{
+  background-color: #f1efef;
+}
+.text-muted{
+  font-size: 12px;
+  font-weight: 400;
+}
+.edit-btn{
+  border: 1px solid #ccc;
+  width: 150px;
+}
+.edit-btn a{
+  color: black;
+}
+.modal-dialog{
+  max-width: 45%;
+  margin-top: 8%;
+}
+.submitBtn{
+  display: block;
+  width: 96%;
+  margin: 20px 15px;
+}
+.uploaderdiv{
+  background-color: #ffffff;
+  position: relative;
+  top: 5px;
+  left: 16px;
+  width: 150px;
+  height: 150px;
+}
+.btn-default{
+  border: 1px solid gray;
+  padding: 0px;
+  width: 90%;
+  position: absolute;
+  bottom: 5px;
+  left: 8px;
+}
+.uploader{
+  visibility: hidden;
+}
+.uploadedimg{
+  height: 99px;
+  width: 110px;
+  border: 1px solid#ccc;
+  border-radius: 50%;
+  margin-top: 8px;
+  margin-left: 5px;
+}

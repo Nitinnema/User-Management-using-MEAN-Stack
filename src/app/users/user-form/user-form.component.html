@@ -1,0 +1,48 @@
+<mat-toolbar>
+  <mat-toolbar-row class="container">
+    <h1>User Directory</h1>
+    <span class="example-spacer"></span>
+    <button type="button" class="btn btn-primary btn-md" data-toggle="modal" data-target="#myModal"><i class="fas fa-plus-circle"></i> Add new Users</button>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <div class="modal-body">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h5>Add new User</h5><br>
+        <form (submit)=onSubmitForm(userForm) #userForm="ngForm">
+          <div class="form-group col-md-8" style="float: right">
+            <label for="username">User Name</label>
+            <input type="text" ngModel name="username" class="form-control" #username="ngModel" id="username" placeholder="enter full name">
+            <span *ngIf="username.invalid">Please enter a username.</span>
+          </div>
+          <div class="form-group col-md-8" style="float: right">
+            <label for="address">Address</label>
+            <input type="text" ngModel name="address" class="form-control" #address="ngModel" id="address" placeholder="enter address">
+            <span *ngIf="address.invalid">Please enter address.</span>
+          </div>
+          <div class="form-group col-md-4 uploaderdiv">
+            <img *ngIf="imgPreview !== '' && imgPreview" class="uploadedimg" [src]="imgPreview" />
+            <input type="file" #uploadfile class="uploader" (change)="uploaded($event)">
+            <button class="btn btn-default" type="button" (click)="uploadfile.click()">Upload</button>
+          </div>
+          <div class="form-group col-md-6" style="float:right;">
+            <label for="email">Email</label>
+            <input type="email" ngModel name="email" class="form-control" #email="ngModel" id="email" placeholder="enter email">
+            <span *ngIf="email.invalid">Please enter email.</span>
+          </div>
+          <div class="form-group col-md-6" style="margin-top: 23px;">
+            <label for="contact">Contact</label>
+            <input type="text" ngModel name="contact" class="form-control" #contact="ngModel" id="contact" placeholder="enter contact">
+            <span *ngIf="contact.invalid">Please enter contact.</span>
+          </div>
+          <button type="submit" class="btn btn-primary submitBtn">Add new User</button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</div>
